@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Конструктор расписания</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./scripts/generateSchedule.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="./index.html">Главная</a>
+            <a href="./schedule.html">Конструктор таблицы</a>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h1>Создание расписания</h1>
+            <form id="scheduleForm">
+                <label>Дни недели:
+                    <select name="weekType">
+                        <option value="5">5-дневная</option>
+                        <option value="6">6-дневная</option>
+                    </select>
+                </label>
+                <label>Макс. количество занятий:
+                    <input type="number" name="maxLessons" min="1" max="10" required>
+                </label>
+                <button type="submit">Создать расписание</button>
+            </form>
+            <div id="scheduleContainer"></div>
+        </section>
+    </main>
+</body>
+
+</html>
